@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music Player</title>
+  <link rel="stylesheet" href="style.css"> <!-- Подключение CSS для стилизации страницы -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> <!-- Подключение иконок Material Icons -->
+</head>
+<body>
+  <div class="wrapper"> <!-- Основной контейнер для плеера -->
+    <div class="top-bar"> <!-- Верхняя панель с информацией о текущем треке -->
+      <i class="material-icons">expand_more</i> <!-- Иконка для раскрытия дополнительной информации -->
+      <span>Сейчас играет</span> <!-- Текст "Сейчас играет" -->
+      <i class="material-icons">more_horiz</i> <!-- Иконка для дополнительных действий -->
+    </div>
+    
+    <div class="img-area"> <!-- Область для отображения обложки альбома -->
+      <img src="" alt=""> <!-- Изображение обложки. URL будет добавлен через JavaScript -->
+    </div>
+    
+    <div class="song-details"> <!-- Информация о текущем треке -->
+      <p class="name"></p> <!-- Название трека -->
+      <p class="artist"></p> <!-- Исполнитель трека -->
+    </div>
+    
+    <div class="progress-area"> <!-- Область прогресса трека -->
+      <div class="progress-bar"> <!-- Полоса прогресса (длительность трека) -->
+        <audio id="main-audio" src=""></audio> <!-- Аудио элемент для фонового воспроизведения трека -->
+      </div>
+      <div class="song-timer"> <!-- Таймер трека -->
+        <span class="current-time">0:00</span> <!-- Текущее время воспроизведения -->
+        <span class="max-duration">0:00</span> <!-- Полная длительность трека -->
+      </div>
+    </div>
+    
+    <div class="controls"> <!-- Элементы управления плеером -->
+      <i id="repeat-plist" class="material-icons" title="Playlist looped">repeat</i> <!-- Кнопка повторного воспроизведения плейлиста -->
+      <i id="prev" class="material-icons">skip_previous</i> <!-- Кнопка предыдущего трека -->
+      <div class="play-pause"> <!-- Кнопка воспроизведения/паузы -->
+        <i class="material-icons play">play_arrow</i> <!-- Иконка воспроизведения -->
+      </div>
+      <i id="next" class="material-icons">skip_next</i> <!-- Кнопка следующего трека -->
+      <i id="more-music" class="material-icons">queue_music</i> <!-- Иконка для отображения списка музыки -->
+    </div>
+    
+    <div class="music-list"> <!-- Список музыки -->
+      <div class="header"> <!-- Заголовок списка музыки -->
+        <div class="row"> <!-- Строка заголовка -->
+          <i class="list material-icons">queue_music</i> <!-- Иконка списка музыки -->
+          <span>Список музыки</span> <!-- Текст "Список музыки" -->
+        </div>
+        <i id="close" class="material-icons">close</i> <!-- Кнопка закрытия списка -->
+      </div>
+      <ul>
+        <!-- Здесь элементы списка (li) будут добавлены через JavaScript -->
+      </ul>
+    </div>
+
+  </div>
+
+  <script src="js/music-list.js"></script> <!-- Подключение JavaScript для работы со списком музыки -->
+  <script src="js/script.js"></script> <!-- Подключение основного JavaScript для управления плеером -->
+
+</body>
+</html>
